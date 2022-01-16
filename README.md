@@ -1,6 +1,6 @@
 # Bob: The Plant Moisture Monitor and SMS Notification System
 
-[Bob](https://github.com/sprice134/hackathon2022/blob/main/Images/hackathon_logo.png?raw=true)
+![Bob](https://github.com/sprice134/hackathon2022/blob/main/Images/hackathon_logo.png?raw=true)
 
 ## Concept
 With busy schedules due to classwork, sports, and other activities, college students tend to neglect their house plants. 
@@ -47,3 +47,6 @@ When Bob measures your plant's soil and it's dry, he will text you a notificatio
 ## What's next for Bob
 After sharing our idea with some friends that owned plants of their own, they thought the idea was great and some even said "I need that for my plants!"
 Our main goal for Bob was to actually be able to water the dry plant for the user, but unfortunately, we did not have enough time to make this happen. With more time and materials, Bob would be able to transform from a moisture monitor to a full watering system. We would also turn the notification system into an app so that the user could track how often his or her plants need to get watered more easily.
+
+
+![Hackathon logo](https://github.com/sprice134/hackathon2022/blob/main/Images/hackathon_logo.png?raw=true)
