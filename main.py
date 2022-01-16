@@ -4,23 +4,20 @@ import random
 import time
 from twilio.rest import Client
 
-account_sid = 'ACc9a0b8e191c56b877a2fdbd764240edf'
-auth_token = 'afa2fc0421e2659a1c300f84f5ce9343'
-stephen_num = '+14252312254'
-porto_num = '+16035609830'
-sending_number = "+18305297727"
+account_sid = ''                #Fill with account ID
+auth_token = ''                 #Fill with auth token
+recieving_number = ''           #Fill with number you are texting    
+sending_number = ''             #Fill with number assigned by twilio
 cont = True
-fakeText = False
-lowerThresh = 1.9
-upperThresh = 3
+fakeText = False                #Set to true for demos or testing
+lowerThresh = 1.9               #Arbitrarily set based on tests on plants
+upperThresh = 3                 #Arbitrarily set based on tests on plants
 watered = False
 
 def getVoltage():
     return random.randint(0, 100)/100
 
 def sendText(sender, receiver, message):
-    #account_sid = os.environ['ACc9a0b8e191c56b877a2fdbd764240edf']
-    #auth_token = os.environ['25656f4ce141a376cfd1466343e8a80f']
     client = Client(account_sid, auth_token)
     message = client.messages \
                     .create(
@@ -85,7 +82,7 @@ try:
                     watered = True
                     print('-'*30)
                 else:
-                    sendText(sending_number, stephen_num, "The plant is dry, it has been watered")
+                    sendText(sending_number, recieving_number, "The plant is dry, it has been watered")
                     fakeText = True
             elif watered == False:
                 if fakeText: 
@@ -96,19 +93,13 @@ try:
                     watered = True
                     print('-'*30)
                 else:
-                    sendText(sending_number, stephen_num, "\nYour plant is dry, it needs water!\n Previous watering: " + str(last_water) + 'Love, Bob')
+                    sendText(sending_number, recieving_number, "\nYour plant is dry, it needs water!\n Previous watering: " + str(last_water) + 'Love, Bob')
                     fakeText = True
         elif v < upperThresh:
             watered = False
         else:
             print("Plant doesn't need water at this time")
         time.sleep(10)
-    '''while True:
-        adc_0 = read_adc(0)
-        adc_1 = read_adc(1)
-        print('Voltage: ' + str(round(adc_0, 2)))
-        #print("Ch 0:", round(adc_0, 2), "V Ch 1:", round(adc_1, 2), "V")
-        time.sleep(1)'''
 
 finally:
     spi.close()
