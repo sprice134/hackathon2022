@@ -1,6 +1,6 @@
 # Bob: The Plant Moisture Monitor and SMS Notification System
 
-![Bob](https://github.com/sprice134/hackathon2022/blob/main/Images/hackathon_logo.png?raw=true)
+![Bob](https://github.com/sprice134/hackathon2022/blob/main/Images/bob-setup.jpeg?raw=true)
 
 ## Concept
 With busy schedules due to classwork, sports, and other activities, college students tend to neglect their house plants. 
